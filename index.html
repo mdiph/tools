@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All-in-One Tools</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f6f8fa;
+      --card: #ffffff;
+      --heading: #2a2a2a;
+      --text: #34343c;
+      --muted: #757575;
+      --border: #e9ecef;
+      --accent: #0056b2;
+      --accent-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: rgb(27 27 30);
+        --card: #1e1e1e;
+        --heading: #cccccc;
+        --text: rgb(175 176 177);
+        --muted: #868686;
+        --border: #2e2f31;
+        --accent: rgb(138 180 248);
+        --accent-text: #14161a;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 16px;
+    }
+    h1 { margin: 0 0 4px; font-size: 1.75rem; color: var(--heading); }
+    header p { margin: 0 0 32px; color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .card h2 { margin: 0; font-size: 1.1rem; color: var(--heading); }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; flex: 1; }
+    .card a {
+      align-self: flex-start;
+      margin-top: 8px;
+      padding: 8px 16px;
+      background: var(--accent);
+      color: var(--accent-text);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .card a:hover { filter: brightness(1.1); }
+    .card a:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+    footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 16px 32px;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 24px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .footer-inner p { margin: 0; }
+    .footer-inner strong { color: var(--text); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>All-in-One Tools</h1>
+      <p>Pick a tool to open it.</p>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Merge PDF</h2>
+        <p>Merge Your PDF Here</p>
+        <a href="mergepdf/index.html">Open</a>
+      </section>
+
+      <section class="card">
+        <h2>Split PDF</h2>
+        <p>Split Your PDF Here</p>
+        <a href="splitpdf/index.html">Open</a>
+      </section>
+
+      <section class="card">
+        <h2>Rearrange PDF</h2>
+        <p>Drag and drop pages to reorder, rotate or delete them Here</p>
+        <a href="rearrangepdf/index.html">Open</a>
+      </section>
+
+      <section class="card">
+        <h2>Watermark PDF</h2>
+        <p>Add a text or image watermark, single or repeating Here</p>
+        <a href="watermarkpdf/index.html">Open</a>
+      </section>
+
+      <section class="card">
+        <h2>Protect PDF</h2>
+        <p>Lock your PDF with a password so only people who know it can open it Here</p>
+        <a href="protectpdf/index.html">Open</a>
+      </section>
+
+      <section class="card">
+        <h2>Markdown to PPTX</h2>
+        <p>Convert Markdown into a PowerPoint presentation Here</p>
+        <a href="markdowntopptx/index.html">Open</a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; <span id="year">2026</span> <strong>Muhammad Dhiva Pradigta</strong>. Some rights reserved.</p>
+      <p>All-in-One Tools</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
